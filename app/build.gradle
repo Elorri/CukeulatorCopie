@@ -2,33 +2,17 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "21.1.2"
+    buildToolsVersion "26.0.1"
 
     defaultConfig {
-        applicationId "cucumber.cukeulator"
-        minSdkVersion 16
+        applicationId "com.elorri.android.myapplication2"
+        minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
 
-
         testInstrumentationRunner "cucumber.cukeulator.test.Instrumentation"
-
     }
-
-
-    packagingOptions {
-        exclude 'LICENSE.txt'
-        pickFirst('META-INF/maven/com.google.guava/guava/pom.xml')
-        pickFirst('META-INF/maven/com.google.guava/guava/pom.properties')
-    }
-
-    sourceSets {
-        androidTest {
-            assets.srcDirs = ['src/androidTest/assets']
-        }
-    }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -38,14 +22,12 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
-
     androidTestCompile 'com.android.support:support-annotations:23.1.1'
 
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
-
+    /* Cucumber librairies */
     androidTestCompile ('info.cukes:cucumber-android:1.2.4') {
         exclude module: 'cucumber-jvm-deps'
     }
@@ -53,7 +35,9 @@ dependencies {
         exclude module: 'cucumber-jvm-deps'
     }
     androidTestCompile 'info.cukes:cucumber-jvm-deps:1.0.3'
+    /* Cucumber fin */
 
+    /* Espresso */
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -64,4 +48,5 @@ dependencies {
         exclude module: 'design'
         exclude module: 'recyclerview-v7'
     }
+    /* Espresso fin */
 }

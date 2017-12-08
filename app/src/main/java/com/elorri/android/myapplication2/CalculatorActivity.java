@@ -1,4 +1,4 @@
-package cucumber.cukeulator;
+package com.elorri.android.myapplication2;
 
 import android.app.Activity;
 import android.os.Bundle;
