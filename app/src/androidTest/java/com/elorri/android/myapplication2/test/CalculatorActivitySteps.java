@@ -1,13 +1,14 @@
-package com.elorri.android.myapplication2;
+package com.elorri.android.myapplication2.test;
 
 import android.test.ActivityInstrumentationTestCase2;
+
+import com.elorri.android.myapplication2.CalculatorActivity;
+import com.elorri.android.myapplication2.R;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import com.elorri.android.myapplication2.CalculatorActivity;
-import com.elorri.android.myapplication2.R;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -36,7 +37,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 @CucumberOptions(features = "features")
 public class CalculatorActivitySteps extends ActivityInstrumentationTestCase2<CalculatorActivity> {
 
-    public CalculatorActivitySteps(com.elorri.android.myapplication2.SomeDependency dependency) {
+    public CalculatorActivitySteps(com.elorri.android.myapplication2.test.SomeDependency dependency) {
         super(CalculatorActivity.class);
         assertNotNull(dependency);
     }
