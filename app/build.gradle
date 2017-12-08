@@ -13,6 +13,13 @@ android {
 
         testInstrumentationRunner "cucumber.cukeulator.test.Instrumentation"
     }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        pickFirst('META-INF/maven/com.google.guava/guava/pom.xml')
+        pickFirst('META-INF/maven/com.google.guava/guava/pom.properties')
+    }
+
     buildTypes {
         release {
             minifyEnabled false
