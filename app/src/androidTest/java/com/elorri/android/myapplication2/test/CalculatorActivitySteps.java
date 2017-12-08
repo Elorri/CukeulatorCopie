@@ -1,4 +1,4 @@
-package com.elorri.android.myapplication2;
+package com.elorri.android.myapplication2.test;
 
 import android.test.ActivityInstrumentationTestCase2;
 
@@ -37,7 +37,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 @CucumberOptions(features = "features")
 public class CalculatorActivitySteps extends ActivityInstrumentationTestCase2<CalculatorActivity> {
 
-    public CalculatorActivitySteps(com.elorri.android.myapplication2.SomeDependency dependency) {
+    public CalculatorActivitySteps(com.elorri.android.myapplication2.test.SomeDependency dependency) {
         super(CalculatorActivity.class);
         assertNotNull(dependency);
     }

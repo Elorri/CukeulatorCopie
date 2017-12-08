@@ -1,4 +1,4 @@
-package com.elorri.android.myapplication2;
+package com.elorri.android.myapplication2.test;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

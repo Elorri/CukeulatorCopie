@@ -1,4 +1,4 @@
-package com.elorri.android.myapplication2;
+package com.elorri.android.myapplication2.test;
 
 import android.os.Bundle;
 import android.support.test.runner.MonitoringInstrumentation;
